@@ -1,5 +1,7 @@
 # Weburz's Base Project Template
 
+[![QA Checks](https://github.com/Weburz/cookiecutter-templates/actions/workflows/qa-check.yml/badge.svg)](https://github.com/Weburz/cookiecutter-templates/actions/workflows/qa-check.yml)
+
 This repository contains a bunch of templates to quickly generate projects at
 Weburz. It contains the base skeleton resources required for any and all
 projects built within Weburz. Hence, this repository should ideally be used to
