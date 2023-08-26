@@ -1,7 +1,14 @@
 {
-  "project_name": "Weburz Project",
+  "project_name": "Simple Project",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "project_short_description": "A boilerplate template repository to work on for all Weburz projects",
+  "project_short_description": "A simple project with nothing other than some basic stuff to build a project from.",
   "version": "0.0.1",
-  "create_author_file": "y"
+  "email": "contact@weburz.com",
+  "init_git": true,
+  "__prompts__": {
+    "project_name": "Select the project name",
+    "project_short_description": "Write a short description of the project",
+    "version": "SemVer compliant version name",
+    "email": "Contact email address"
+  }
 }
