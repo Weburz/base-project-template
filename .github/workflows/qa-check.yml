@@ -1,0 +1,17 @@
+name: QA Checks
+
+on: [push]
+
+jobs:
+  qa-checks:
+    name: QA Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3.6.0
+
+      - name: Setup Python for the Environment
+        uses: actions/setup-python@v4.7.0
+
+      - name: Setup and Run the Pre-Commit Hooks
+        uses: pre-commit/action@v3.0.0
