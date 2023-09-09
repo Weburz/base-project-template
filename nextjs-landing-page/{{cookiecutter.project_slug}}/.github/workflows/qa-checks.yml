@@ -1,0 +1,25 @@
+name: QA Checks
+
+on:
+  push:
+
+jobs:
+  qa-checks:
+    name: QA Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3.6.0
+
+      - name: Setup Node.js for the Dependencies
+        uses: actions/setup-node@v3.8.1
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install the Dependencies
+        run: |
+          npm run format:fix
+          npm run lint
+
+      # TODO: Replace the following lines of code with what Code Quality Checks tools to be used

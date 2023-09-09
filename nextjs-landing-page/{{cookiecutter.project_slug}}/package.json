@@ -1,0 +1,57 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "lint": "next lint",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "prepare": "pre-commit install --install-hooks"
+  },
+  "dependencies": {
+    "next": "~13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/node": "^20.5.9",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^13.4.19",
+    "eslint-config-prettier": "^9.0.0",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.3.3",
+    "typescript": "~5.2.2"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "bracketSameLine": false,
+    "proseWrap": "always",
+    "plugins": [
+      "@trivago/prettier-plugin-sort-imports",
+      "prettier-plugin-tailwindcss"
+    ],
+    "importOrder": [
+      "^(react$)|(react-dom$)$",
+      "^(next/(.*)$)|(next$)$",
+      "react-icons/[a-z]*",
+      "<THIRD_PARTY_MODULES>",
+      "^@\\w",
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+  },
+  "eslintConfig": {
+    "extends": [
+      "next/core-web-vitals",
+      "prettier"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "project_name": "Landing Page",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "description": "Simple Next.js, TailwindCSS and TypeScript-based landing page",
+  "version": "0.0.1",
+  "email": "contact@weburz.com",
+  "__prompts__": {
+    "project_name": "Select the project name",
+    "project_slug": "Local directory name",
+    "description": "Write a short description of the project",
+    "version": "SemVer compliant version name",
+    "email": "Contact email address"
+  }
+}
