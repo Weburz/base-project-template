@@ -3,9 +3,13 @@ repos:
     rev: v4.4.0
     hooks:
       - id: trailing-whitespace
+        stages: [pre-commit]
       - id: end-of-file-fixer
+        stages: [pre-commit]
       - id: check-yaml
+        stages: [pre-commit]
       - id: check-added-large-files
+        stages: [pre-commit]
       - id: detect-private-key
 
   - repo: https://github.com/hadolint/hadolint
@@ -13,6 +17,7 @@ repos:
     hooks:
       - id: hadolint-docker
         name: lint Dockerfile
+        stages: [pre-commit]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.5.0
@@ -26,6 +31,7 @@ repos:
     hooks:
       - id: prettier
         name: check for non-standard formatting concerns
+        stages: [pre-commit]
         additional_dependencies:
           - prettier@3
           - "prettier-plugin-tailwindcss"
@@ -36,6 +42,7 @@ repos:
     hooks:
       - id: eslint
         name: check for linting errors and warnings
+        stages: [pre-commit]
         files: \.[jt]sx?$
         types: [file]
         additional_dependencies:
