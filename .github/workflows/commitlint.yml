@@ -1,0 +1,31 @@
+name: Lint Commit Messages
+
+on:
+  push:
+    branches-ignore:
+      - dependabot/**
+
+jobs:
+  commitlint:
+    name: Check Commit Messages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.0.0
+
+      - name: Install Commitlint
+        run: |
+          npm install conventional-changelog-conventionalcommits
+          npm install commitlint@latest
+
+      - name: Validate Current Commit (Last Commit) With Commitlint
+        if: github.event_name == "push"
+        run: |
+          npx commitlint --from HEAD~1 --to HEAD --verbose
+
+      - name: Validate PR Commits With Commitlint
+        if: github.event_name == "pull_request"
+        run:
+          npx commitlint --from ${{ github.event.pull_request.head.sha }}~${{
+          github.event.pull_request.commits }} --to ${{
+          github.event.pull_request.head.sha }} --verbose
