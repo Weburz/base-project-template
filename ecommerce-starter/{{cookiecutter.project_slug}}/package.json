@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@commitlint/types": "^17.4.4"
+  }
+}
