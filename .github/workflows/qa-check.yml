@@ -1,6 +1,10 @@
 name: QA Checks
 
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - dependabot/**
+  pull_request:
 
 jobs:
   qa-checks:
@@ -15,3 +19,13 @@ jobs:
 
       - name: Setup and Run the Pre-Commit Hooks
         uses: pre-commit/action@v3.0.0
+
+  commitlint:
+    name: Check Commit Messages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.0.0
+
+      - name: Setup and Run Commitlint
+        uses: wagoid/commitlint-github-action@v5.4.3
