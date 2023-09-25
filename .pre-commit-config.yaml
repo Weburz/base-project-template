@@ -26,12 +26,14 @@ repos:
         name: lint Python files
         stages: [pre-commit]
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.5.1
-    hooks:
-      - id: mypy
-        name: type-check Python files
-        stages: [pre-commit]
+  # FIXME: Figure a way out to make mypy work. Refer to the issue thread below for more information:
+  # https://github.com/python/mypy/issues/10428
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #   rev: v1.5.1
+  #   hooks:
+  #     - id: mypy
+  #       name: type-check Python files
+  #       stages: [pre-commit]
 
   - repo: https://github.com/psf/black
     rev: 23.9.1
