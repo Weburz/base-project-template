@@ -22,13 +22,19 @@ repos:
     rev: v0.0.291
     hooks:
       - id: ruff
+        name: lint Python files
+        stages: [pre-commit]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.5.1
     hooks:
       - id: mypy
+        name: type-check Python files
+        stages: [pre-commit]
 
   - repo: https://github.com/psf/black
     rev: 23.9.1
     hooks:
       - id: black
+        name: format Python files
+        stages: [pre-commit]
