@@ -1,7 +1,7 @@
 {
   "template": [
-    "Simple Project (./simple-project)",
-    "Simple Landing Page (./simple-landing-page)",
-    "Ecommerce Starter Template (./ecommerce-starter)"
+    "Base Starter (./base-starter",
+    "Landing Page Starter (./landing-page-starter)",
+    "Ecommerce Starter (./ecommerce-starter)"
   ]
 }
