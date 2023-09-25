@@ -1,4 +1,4 @@
-# Weburz's Base Project Template
+# Weburz's Project Starters
 
 [![QA Checks](https://github.com/Weburz/cookiecutter-templates/actions/workflows/qa-check.yml/badge.svg)](https://github.com/Weburz/cookiecutter-templates/actions/workflows/qa-check.yml)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Weburz/cookiecutter-templates?logo=github&label=Repo%20Size)
@@ -23,7 +23,7 @@ repository;
    necessary skeleton files.
 
    ```console
-   cookiecutter gh:Weburz/cookiecutter-templates
+   cookiecutter gh:Weburz/project-starters
    ```
 
 3. With that you will be prompted to select the right template, so choose the
@@ -31,6 +31,30 @@ repository;
 
 With the project generated, change the directory in to the project's directory
 and start working on it as you deem it fit to.
+
+## Development Guidelines
+
+If you have an idea for a template or want to make some improvements to the
+current set of templates, please feel free to do so. But before you share a PR
+or two with us, here are some guidelines to follow to ensure a standard
+development procedure is followed.
+
+1. Ensure you have the following tools already installed on your system:
+   - [Python](https://www.python.org)
+   - [Cookiecutter](https://cookiecutter.readthedocs.io)
+   - [Pre-commit](https://pre-commit.com)
+2. With the aforementioned tools installed and verified, clone the remote
+   repository locally to your development environment by running the following
+   command;
+
+   ```console
+   git clone git@github.com:Weburz/project-starters
+   ```
+
+3. Change directory in to the `project-starters` folder and then make your
+   changes to the template files and/or create a new template for future usage.
+4. Read the `cookiecutter` documentations to learn more about
+   writing/maintaining the templates.
 
 ## Distribution Rights
 
