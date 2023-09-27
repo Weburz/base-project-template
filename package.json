@@ -1,8 +1,14 @@
 {
+  "scripts": {
+    "pre-commit": "pre-commit run --all-files",
+    "postinstall": "pre-commit install --install-hooks"
+  },
   "devDependencies": {
     "@commitlint/types": "^17.4.4",
     "@types/node": "^20.7.0",
     "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "eslintConfig": {
