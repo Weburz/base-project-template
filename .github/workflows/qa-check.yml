@@ -13,11 +13,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4.1.0
 
-      - name: Setup Python for the Environment
-        uses: actions/setup-python@v4.7.0
+      - name: Install Pre-Commit and the Hooks
+        run: |
+          pipx install pre-commit
+          npm install
 
-      - name: Setup and Run the Pre-Commit Hooks
-        uses: pre-commit/action@v3.0.0
+      - name: Run the Hooks for QA Checks
+        run: npm run pre-commit
 
   commitlint:
     name: Check Commit Messages
