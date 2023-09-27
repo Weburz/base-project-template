@@ -55,7 +55,7 @@ repos:
     rev: v8.50.0
     hooks:
       - id: eslint
-        name: format JS/TS files
+        name: lint JS/TS files
         files: \.[jt]sx?$
         types: [file]
         stages:
@@ -68,7 +68,7 @@ repos:
     rev: v3.0.3
     hooks:
       - id: prettier
-        name: lint JS/TS files
+        name: format JS/TS files
         files: \.[jt]sx?$
         types: [file]
         stages:
