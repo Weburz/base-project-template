@@ -50,29 +50,3 @@ repos:
         name: format Python files
         stages:
           - pre-commit
-
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.50.0
-    hooks:
-      - id: eslint
-        name: lint JS/TS files
-        files: \.[jt]sx?$
-        types: [file]
-        stages:
-          - pre-commit
-        additional_dependencies:
-          - eslint@8
-          - eslint-config-prettier
-
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.3
-    hooks:
-      - id: prettier
-        name: format JS/TS files
-        files: \.[jt]sx?$
-        types: [file]
-        stages:
-          - pre-commit
-        additional_dependencies:
-          - prettier@3
-          - "@trivago/prettier-plugin-sort-imports"
