@@ -10,7 +10,7 @@ python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.291"
-black = "^23.9.1"
+black = "^24.3.0"
 mypy = "^1.5.1"
 
 [build-system]
