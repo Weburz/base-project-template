@@ -4,7 +4,7 @@
     "postinstall": "pre-commit install --install-hooks"
   },
   "devDependencies": {
-    "@commitlint/types": "^19.0.3",
+    "@commitlint/types": "^19.5.0",
     "@types/node": "^22.5.4",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
